@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIMICapp - Tabla Periodica</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/logo_2.png" type="image/x-icon">
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	
+	function cambiarElemento(blanco){
+		document.getElementById("elemento").src=blanco;
+	}
+  // Llama a la función automáticamente cuando la página se carga
+window.onload = function() {
+  estado();
+};
+
+function estado() {
+  var botones = document.getElementsByClassName("b");
+
+  for (var i = 0; i < botones.length; i++) {
+    var boton = botones[i];
+
+    // Reiniciar el color del fondo y el borde a sus valores predeterminados
+    boton.style.backgroundColor = "";
+    boton.style.borderColor = "";
+
+    // Verificar el valor del atributo id
+    if (boton.id === "s") {
+      // Cambiar el color del fondo y el borde a negro
+      boton.style.backgroundColor = "red"; //negro
+      boton.style.borderColor = "red";
+    }
+    if (boton.id === "g") {
+      // Cambiar el color del fondo y el borde a violeta
+      boton.style.backgroundColor = "lightblue"; //violeta
+      boton.style.borderColor = "lightblue";
+    }
+    if (boton.id === "l") {
+      // Cambiar el color del fondo y el borde a celeste (liquidos)
+      boton.style.backgroundColor = "blue"; //celeste
+      boton.style.borderColor = "blue";
+    }
+    if (boton.id === "ps") {
+      // Cambiar el color del fondo y el borde a gris
+      boton.style.backgroundColor = "grey";
+      boton.style.borderColor = "grey";
+    }
+  }
+}
+
+	</script>
+
+<div class="container">
+    
+  <div class="header">
+    <a href="index.html"> 
+        <img src="img\logo.png" 
+            alt="QUIMICapp" 
+            name="QUIMICapp" 
+            width="960" 
+            height="300" 
+            id="logo" 
+            style=" background: blue ; display:block;" />
+    </a>
+
+    <!-- end .header --></div>
+  <div class="sidebar1"
+    style="height: 1050px;">
+    <ul class="nav">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="este">
+            <a href="TablaPeriodica.html">Tabla Periódica</a>
+          </li>
+          <li>
+            <a href="ModeloAtómico.html">Modelo átomico</a>
+          </li>
+          <li>
+            <a href="actividades.html">Actividades</a>
+          </li>
+          <li>
+            <a href="juego.html">Juego</a>
+          </li>
+	        <li>
+            <a href="nosotros.html">Sobre nosotros</a>
+          </li>
+    </ul>
+    <p class="frase">Ví en un sueño una mesa donde todos los elementos encajaban 
+      según lo requerido. Al despertar, inmediatamente lo escribí en una hoja de papel. </p>
+    <p>-Dimitri Mendeléyev.</p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Tabla Períodica de los Elementos</h1>
+    <p><img id="elemento"  src="img/blanco.png" width="250" height="250" alt="blanco" />
+      <img id="esquema" src="img/esquema.png"  width="325" height="225" alt="esquema" />
+      <img id="ref" src="img/ref.png" width="100" height="225" alt="Referencias de Color"/>
+      </p>
+    <br>
+    <p><button class="b" id="g" type="button" onclick=cambiarElemento('img/1.png')><img src="img/1.png" width="32" height="32" alt="Hidrógeno" /></button>
+      <img src="img/blanco.png" width="36" height="36" alt="2" />
+       <img src="img/blanco.png" width="36" height="36" alt="2" />
+        <img src="img/blanco.png" width="36" height="36" alt="2" />
+         <img src="img/blanco.png" width="36" height="36" alt="2" />
+          <img src="img/blanco.png" width="36" height="36" alt="2" />
+           <img src="img/blanco.png" width="36" height="36" alt="2" />
+            <img src="img/blanco.png" width="36" height="36" alt="2" />
+             <img src="img/blanco.png" width="36" height="36" alt="2" />
+              <img src="img/blanco.png" width="36" height="36" alt="2" />
+               <img src="img/blanco.png" width="36" height="36" alt="2" /> 
+                <img src="img/blanco.png" width="36" height="36" alt="2" />
+                <img src="img/blanco.png" width="36" height="36" alt="2" />
+                 <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                   <img src="img/blanco.png" width="36" height="36" alt="2" />
+                    <img src="img/blanco.png" width="36" height="36" alt="2" />
+                     <button class="b" id="g" type="button" onclick=cambiarElemento('img/2.png')><img src="img/2.png" width="32" height="Helio" alt="2" /></button>
+               </p>
+                <p><button class="b" id="s" type="button" onclick=cambiarElemento('img/3.png')><img src="img/3.png" width="32" height="32" alt="Litio" /></button>
+                <button class="b" id="s" type="button" onclick=cambiarElemento('img/4.png')><img src="img/4.png" width="32" height="32" alt="Birilio" /></button>
+                <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                    <img src="img/blanco.png" width="36" height="36" alt="2" />
+                      <img src="img/blanco.png" width="36" height="36" alt="2" />
+                        <img src="img/blanco.png" width="36" height="36" alt="2" />
+                          <img src="img/blanco.png" width="36" height="36" alt="2" />
+                            <img src="img/blanco.png" width="36" height="36" alt="2" />
+                              <img src="img/blanco.png" width="36" height="36" alt="2" />
+                                <img src="img/blanco.png" width="36" height="36" alt="2" /> 
+                                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                                    <button class="b" id="s" type="button" onclick=cambiarElemento('img/5.png')><img src="img/5.png" width="32" height="32" alt="Boro" /></button>
+                                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/6.png')><img src="img/6.png" width="32" height="32" alt="Carbono" /></button>
+                                        <button class="b" id="g" type="button" onclick=cambiarElemento('img/7.png')><img src="img/7.png" width="32" height="32" alt="Nitrogeno" /></button>
+                                          <button class="b" id="g" type="button" onclick=cambiarElemento('img/8.png')><img src="img/8.png" width="32" height="32" alt="Oxigeno" /></button>
+                                            <button class="b" id="g" type="button" onclick=cambiarElemento('img/9.png')><img src="img/9.png" width="32" height="32" alt="Fluor" /></button>
+                                              <button class="b" id="g" type="button" onclick=cambiarElemento('img/10.png')><img src="img/10.png" width="32" height="32" alt="Neón" /></button>
+                </p>
+                <p>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/11.png')><img src="img/11.png" width="32" height="32" alt="Sodio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/12.png')><img src="img/12.png" width="32" height="32" alt="Magnesio" /></button>
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <img src="img/blanco.png" width="36" height="36" alt="2" /> 
+                  <img src="img/blanco.png" width="36" height="36" alt="2" />
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/13.png')><img src="img/13.png" width="32" height="32" alt="Aluminio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/14.png')> <img src="img/14.png" width="32" height="32" alt="Silico" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/15.png')> <img src="img/15.png" width="32" height="32" alt="Fósforo" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/16.png')> <img src="img/16.png" width="32" height="32" alt="Azufre" /></button>
+                  <button class="b" id="g" type="button" onclick=cambiarElemento('img/17.png')> <img src="img/17.png" width="32" height="32" alt="Cloro" /></button>
+                  <button class="b" id="g"  type="button" onclick=cambiarElemento('img/18.png')> <img src="img/18.png" width="32" height="32" alt="Argon" /></button>
+                </p>
+  
+                <p><button class="b" id="s" type="button" onclick=cambiarElemento('img/19.png')> <img src="img/19.png" width="32" height="32" alt="Potasio" /></button>
+               <button class="b" id="s" type="button" onclick=cambiarElemento('img/20.png')>  <img src="img/20.png" width="32" height="32" alt="Calcio" /></button>
+                 <button class="b" id="s" type="button" onclick=cambiarElemento('img/21.png')> <img src="img/21.png" width="32" height="32" alt="Escandio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/22.png')> <img src="img/22.png" width="32" height="32" alt="Titanio" /></button>
+                   <button class="b" id="s" type="button" onclick=cambiarElemento('img/23.png')> <img src="img/23.png" width="32" height="32" alt="Vanadio" /></button>
+                    <button class="b" id="s" type="button" onclick=cambiarElemento('img/24.png')> <img src="img/24.png" width="32" height="32" alt="Cromo" /></button>
+                     <button class="b" id="s" type="button" onclick=cambiarElemento('img/25.png')> <img src="img/25.png" width="32" height="32" alt="Manganeso" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/26.png')> <img src="img/26.png" width="32" height="32" alt="Hiero" /></button>
+                       <button class="b" id="s" type="button" onclick=cambiarElemento('img/27.png')> <img src="img/27.png" width="32" height="32" alt="Cobalto" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/28.png')> <img src="img/28.png" width="32" height="32" alt="Niquel" /></button>
+                         <button class="b" id="s" type="button" onclick=cambiarElemento('img/29.png')> <img src="img/29.png" width="32" height="32" alt="Cobre" /> </button>
+                          <button class="b" id="s" type="button" onclick=cambiarElemento('img/30.png')> <img src="img/30.png" width="32" height="32" alt="Cinc" /></button>
+                          <button class="b" id="l" type="button" onclick=cambiarElemento('img/31.png')> <img src="img/31.png" width="32" height="32" alt="Galio" /></button>
+                           <button class="b" id="s" type="button" onclick=cambiarElemento('img/32.png')> <img src="img/32.png" width="32" height="32" alt="Germanio" /></button>
+                            <button class="b" id="s" type="button" onclick=cambiarElemento('img/33.png')> <img src="img/33.png" width="32" height="32" alt="Arsénico" /></button>
+                             <button class="b" id="s" type="button" onclick=cambiarElemento('img/34.png')> <img src="img/34.png" width="32" height="32" alt="Selenio" /></button>
+                              <button class="b" id="l" type="button" onclick=cambiarElemento('img/35.png')> <img src="img/35.png" width="32" height="32" alt="Bromo" /></button>
+                                <button class="b" id="g" type="button" onclick=cambiarElemento('img/36.png')> <img src="img/36.png" width="32" height="32" alt="Kripton" /></button>
+                         </p>
+                         <p> <button class="b" id="s" type="button" onclick=cambiarElemento('img/37.png')> <img src="img/37.png" width="32" height="32" alt="Rubidio" /></button>
+                 <button class="b" id="s" type="button" onclick=cambiarElemento('img/38.png')> <img src="img/38.png" width="32" height="32" alt="Estroncio" /></button>
+                 <button class="b" id="s" type="button" onclick=cambiarElemento('img/39.png')>  <img src="img/39.png" width="32" height="32" alt="Itrio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/40.png')>  <img src="img/40.png" width="32" height="32" alt="Cicronio" /></button>
+                   <button class="b" id="s" type="button" onclick=cambiarElemento('img/41.png')>  <img src="img/41.png" width="32" height="32" alt="Niobio" /></button>
+                     <button class="b" id="s" type="button" onclick=cambiarElemento('img/42.png')> <img src="img/42.png" width="32" height="32" alt="Molibdenio" /></button>
+                     <button class="b" id="ps" type="button" onclick=cambiarElemento('img/43.png')>  <img src="img/43.png" width="32" height="32" alt="Tecnecio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/44.png')>  <img src="img/44.png" width="32" height="32" alt="Rutenio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/45.png')>   <img src="img/45.png" width="32" height="32" alt="Rodio" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/46.png')>  <img src="img/46.png" width="32" height="32" alt="Paladio" /></button>
+                          <button class="b" id="s" type="button" onclick=cambiarElemento('img/47.png')> <img src="img/47.png" width="32" height="32" alt="Plata" /> </button>
+                          <button class="b" id="s" type="button" onclick=cambiarElemento('img/48.png')>  <img src="img/48.png" width="32" height="32" alt="Cadmio" /></button>
+                           <button class="b" id="s" type="button" onclick=cambiarElemento('img/49.png')> <img src="img/49.png" width="32" height="32" alt="Indio" /></button>
+                           <button class="b" id="s" type="button" onclick=cambiarElemento('img/50.png')>  <img src="img/50.png" width="32" height="32" alt="Estaño" /></button>
+                            <button class="b" id="s" type="button" onclick=cambiarElemento('img/51.png')>  <img src="img/51.png" width="32" height="32" alt="Antimonio" /></button>
+                             <button class="b" id="s" type="button" onclick=cambiarElemento('img/52.png')>  <img src="img/52.png" width="32" height="32" alt="Telurio" /></button>
+                               <button class="b" id="s" type="button" onclick=cambiarElemento('img/53.png')> <img src="img/53.png" width="32" height="32" alt="Yodo" /></button>
+                                <button class="b" id="g" type="button" onclick=cambiarElemento('img/54.png')> <img src="img/54.png" width="32" height="32" alt="Xenión" /></button>
+                         </p>
+                          <p><button class="b" id="l" type="button" onclick=cambiarElemento('img/55.png')> <img src="img/55.png" width="32" height="32" alt="Cesio" /></button>
+               <button class="b" id="s" type="button" onclick=cambiarElemento('img/56.png')>  <img src="img/56.png" width="32" height="32" alt="Brio" /></button>
+                 <button class="b" id="s" type="button" onclick=cambiarElemento('img/57.png')> <img src="img/57.png" width="32" height="32" alt="Lantano" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/72.png')> <img src="img/72.png" width="32" height="32" alt="Hafinio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/73.png')> <img src="img/73.png" width="32" height="32" alt="Tantalio" /></button>
+                    <button class="b" id="s" type="button" onclick=cambiarElemento('img/74.png')> <img src="img/74.png" width="32" height="32" alt="Wolframio" /></button>
+                     <button class="b" id="s" type="button" onclick=cambiarElemento('img/75.png')> <img src="img/75.png" width="32" height="32" alt="Renio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/76.png')> <img src="img/76.png" width="32" height="32" alt="Osmio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/77.png')>  <img src="img/77.png" width="32" height="32" alt="Iridio" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/78.png')> <img src="img/78.png" width="32" height="32" alt="Platino" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/79.png')> <img src="img/79.png" width="32" height="32" alt="Oro" /> </button>
+                         <button class="b" id="l" type="button" onclick=cambiarElemento('img/80.png')> <img src="img/80.png" width="32" height="32" alt="Mercurio" /></button>
+                         <button class="b" id="s" type="button" onclick=cambiarElemento('img/81.png')> <img src="img/81.png" width="32" height="32" alt="Tlio" /></button>
+                          <button class="b" id="s" type="button" onclick=cambiarElemento('img/82.png')> <img src="img/82.png" width="32" height="32" alt="Plomo" /></button>
+                           <button class="b" id="s" type="button" onclick=cambiarElemento('img/83.png')> <img src="img/83.png" width="32" height="32" alt="Bismuto" /></button>
+                            <button class="b" id="s" type="button" onclick=cambiarElemento('img/84.png')> <img src="img/84.png" width="32" height="32" alt="Polonio" /></button>
+                              <button class="b" id="s" type="button" onclick=cambiarElemento('img/85.png')><img src="img/85.png" width="32" height="32" alt="Astato" /></button>
+                             <button class="b" id="g" type="button" onclick=cambiarElemento('img/86.png')>  <img src="img/86.png" width="32" height="32" alt="Radom" /></button>
+                         </p>
+                          <p><button class="b" id="l" type="button" onclick=cambiarElemento('img/87.png')> <img src="img/87.png" width="32" height="32" alt="Francio" /></button>
+                <button class="b" id="s" type="button" onclick=cambiarElemento('img/88.png')><img src="img/88.png" width="32" height="32" alt="Rdio" /></button>
+                <button class="b" id="s" type="button" onclick=cambiarElemento('img/89.png')> <img src="img/89.png" width="32" height="32" alt="Actanio" /></button>
+                  <button class="b" id="ps" type="button" onclick=cambiarElemento('img/104.png')><img src="img/104.png" width="32" height="32" alt="Rutherfordio" /></button>
+                  <button class="b" id="ps" type="button" onclick=cambiarElemento('img/105.png')> <img src="img/105.png" width="32" height="32" alt="Dubnio" /></button>
+                    <button class="b" id="ps" type="button" onclick=cambiarElemento('img/106.png')><img src="img/106.png" width="32" height="32" alt="Saborgio" /></button>
+                    <button class="b" id="ps" type="button" onclick=cambiarElemento('img/107.png')> <img src="img/107.png" width="32" height="32" alt="Bohrio" /></button>
+                      <button class="b" id="ps" type="button" onclick=cambiarElemento('img/108.png')><img src="img/108.png" width="32" height="32" alt="Hassio" /></button>
+                      <button class="b" id="ps" type="button" onclick=cambiarElemento('img/109.png')> <img src="img/109.png" width="32" height="32" alt="Maitnerio" /></button>
+                       <button class="b" id="ps" type="button" onclick=cambiarElemento('img/110.png')> <img src="img/110.png" width="32" height="32" alt="Ununnilio" /></button>
+                         <button class="b" id="ps" type="button" onclick=cambiarElemento('img/111.png')><img src="img/111.png" width="32" height="32" alt="Unununio" /> </button>
+                        <button class="b" id="ps" type="button" onclick=cambiarElemento('img/112.png')>  <img src="img/112.png" width="32" height="32" alt="Ununbio" /></button>
+                         <button class="b" id="ps" type="button" onclick=cambiarElemento('img/113.png')> <img src="img/113.png" width="32" height="32" alt="Ununtrio" /></button>
+                          <button class="b" id="ps" type="button" onclick=cambiarElemento('img/114.png')> <img src="img/114.png" width="32" height="32" alt="Unicuadio" /></button>
+                           <button class="b" id="ps" type="button" onclick=cambiarElemento('img/115.png')> <img src="img/115.png" width="32" height="32" alt="Ununpentio" /></button>
+                           <button class="b" id="ps" type="button" onclick=cambiarElemento('img/116.png')>  <img src="img/116.png" width="32" height="32" alt="Ununhexio" /></button>
+                            <button class="b" id="ps" type="button" onclick=cambiarElemento('img/117.png')>  <img src="img/117.png" width="32" height="32" alt="Uniseptio" /></button>
+                            <button class="b" id="ps" type="button" onclick=cambiarElemento('img/118.png')>   <img src="img/118.png" width="32" height="32" alt="Ununacitio" /></button>
+                         </p>
+               <p>&nbsp;</p>
+              <p>
+                <img src="img/blanco.png" width="32" height="32" alt="2" />
+                <img src="img/blanco.png" width="32" height="32" alt="2" />
+              <button class="b" id="s" type="button" onclick=cambiarElemento('img/58.png')> <img src="img/58.png" width="32" height="32" alt="Cerio" /></button>
+              <button class="b" id="s" type="button" onclick=cambiarElemento('img/59.png')>  <img src="img/59.png" width="32" height="32" alt="Praseodimio" /></button>
+                <button class="b" id="s" type="button" onclick=cambiarElemento('img/60.png')> <img src="img/60.png" width="32" height="32" alt="Neodimio" /></button>
+                 <button class="b" id="ps" type="button" onclick=cambiarElemento('img/61.png')> <img src="img/61.png" width="32" height="32" alt="Prometio" /></button>
+                  <button class="b" id="s" type="button" onclick=cambiarElemento('img/62.png')> <img src="img/62.png" width="32" height="32" alt="Samario" /></button>
+                   <button class="b" id="s" type="button" onclick=cambiarElemento('img/63.png')> <img src="img/63.png" width="32" height="32" alt="Europio" /></button>
+                   <button class="b" id="s" type="button" onclick=cambiarElemento('img/64.png')>  <img src="img/64.png" width="32" height="32" alt="Godolinio" /></button>
+                     <button class="b" id="s" type="button" onclick=cambiarElemento('img/65.png')> <img src="img/65.png" width="32" height="32" alt="Terbio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/66.png')> <img src="img/66.png" width="32" height="32" alt="Disprocio" /></button>
+                      <button class="b" id="s" type="button" onclick=cambiarElemento('img/67.png')>  <img src="img/67.png" width="32" height="32" alt="holmio" /></button>
+                       <button class="b" id="s" type="button" onclick=cambiarElemento('img/68.png')>  <img src="img/68.png" width="32" height="32" alt="Erbio" /> </button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/69.png')>  <img src="img/69.png" width="32" height="32" alt="Tulio" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/70.png')>  <img src="img/70.png" width="32" height="32" alt="Yterbio" /></button>
+                        <button class="b" id="s" type="button" onclick=cambiarElemento('img/71.png')>   <img src="img/71.png" width="32" height="32" alt="Leutonio" /></button>
+                           <img src="img/blanco.png" width="32" height="32" alt="blanco" />
+                            <img src="img/blanco.png" width="32" height="32" alt="blanco" />
+                       </p>
+              
+            <p><img src="img/blanco.png" width="32" height="32" alt="2" />
+              <img src="img/blanco.png" width="32" height="32" alt="2" />
+              <button class="b" id="s" type="button" onclick=cambiarElemento('img/90.png')> <img src="img/90.png" width="32" height="32" alt="Torio" /></button>
+              <button class="b" id="s" type="button" onclick=cambiarElemento('img/91.png')> <img src="img/91.png" width="32" height="32" alt="Procatinio" /></button>
+               <button class="b" id="s" type="button" onclick=cambiarElemento('img/92.png')> <img src="img/92.png" width="32" height="32" alt="Uranio" /></button>
+                <button class="b" id="ps" type="button" onclick=cambiarElemento('img/93.png')> <img src="img/93.png" width="32" height="32" alt="Neuptonio" /></button>
+                <button class="b" id="ps" type="button" onclick=cambiarElemento('img/94.png')>  <img src="img/94.png" width="32" height="32" alt="Plutonio" /></button>
+                 <button class="b" id="ps" type="button" onclick=cambiarElemento('img/95.png')>  <img src="img/95.png" width="32" height="32" alt="Americio" /></button>
+                 <button class="b" id="ps" type="button" onclick=cambiarElemento('img/96.png')>   <img src="img/96.png" width="32" height="32" alt="Curio" /></button>
+                  <button class="b" id="ps" type="button" onclick=cambiarElemento('img/97.png')>   <img src="img/97.png" width="32" height="32" alt="Berkelio" /></button>
+                    <button class="b" id="ps" type="button" onclick=cambiarElemento('img/98.png')>  <img src="img/98.png" width="32" height="32" alt="Californio" /></button>
+                      <button class="b" id="ps" type="button" onclick=cambiarElemento('img/99.png')> <img src="img/99.png" width="32" height="32" alt="Einstenio" /></button>
+                      <button class="b" id="ps" type="button" onclick=cambiarElemento('img/100.png')>  <img src="img/100.png" width="32" height="32" alt="Fermino" /></button>
+                       <button class="b" id="ps" type="button" onclick=cambiarElemento('img/101.png')>  <img src="img/101.png" width="32" height="32" alt="Mondevio" /></button>
+                       <button class="b" id="ps" type="button" onclick=cambiarElemento('img/102.png')>  <img src="img/102.png" width="32" height="32" alt="Nobelio" /></button>
+                        <button class="b" id="ps" type="button" onclick=cambiarElemento('img/103.png')>  <img src="img/103.png" width="32" height="32" alt="Laurencio" /></button>
+                          <img src="img/blanco.png" width="32" height="32" alt="2" />
+                           <img src="img/blanco.png" width="32" height="32" alt="2" />
+            </p>
+   
+             
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Licencia (CC) BY-SA 4.0 2023</a>|Desarrollado por el grupo 
+      <a class="link"
+        href="nosotros.html">
+        9°/1 y 9°/2</a> 
+    de Liceo Fray Marcos, generación 2023.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIMICapp - Inicio</title>
+    <link rel="icon" href="img/logo_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body onkeydown="presionandoTecla(event)" onload="lienzo()">
+
+    <div class="container">
+    
+      <div class="header">
+        <a href="index.html"> 
+            <img src="img\logo.png" 
+                alt="QUIMICapp" 
+                name="QUIMICapp" 
+                width="960" 
+                height="300" 
+                id="logo" 
+                style=" background: blue ; display:block;" />
+        </a>
+      </div><!-- end .header -->
+
+      <div 
+        class="sidebar1"
+        style="height: 910px;">
+        <ul class="nav">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="TablaPeriodica.html">Tabla Periódica</a>
+          </li>
+          <li>
+            <a href="ModeloAtómico.html">Modelo átomico</a>
+          </li>
+          <li>
+            <a href="actividades.html">Actividades</a>
+          </li>
+          <li  class="este">
+            <a href="juego.html">Juego</a>
+          </li>
+	        <li>
+            <a href="nosotros.html">Sobre nosotros</a>
+          </li>
+        </ul>
+      
+    <p class="frase">Vi en un sueño una mesa donde todos los elementos emcajaban 
+		segun lo requerido. Al despertar, inmediatamente lo escribi en una hoja de papel. </p>
+    <p>-Dimitri Mendeléyev.</p>
+    <!-- end .sidebar1 --></div>
+ 
+ <div class="content">
+   
+ <h1>Juego Doc Hidrógeno</h1>
+ <h3>Instrucciones</h3>
+ <p>Mueve al Dr. Hydrogen con las teclas W-A-S-D </p>
+ <p>Si toca los demás elementos, estos desaparecen.</p>
+
+       
+ <canvas id="canvas" width="700" height="500" style="border:1px solid #000000; background-color:#FFF">
+	<img id="dochidro" src="j/dh5.png"  width="70" height="50"/>
+	<img id="helio" src="j\he1.png" width="50" height="50"/>   
+	<img id="neon" src="j\neon1.png" width="50" height="50"/>    
+	<img id="oxigeno" src="j\oxi1.png" width="50" height="50"/>  
+	<img id="nitrogeno" src="j\nitro1.png" width="50" height="50"/>  
+	<img id="hidrogeno" src="j\hi1.png" width="50" height="50"/> 
+
+		
+<script type="text/javascript">
+
+	var x_dh=0;
+	var y_dh=400;
+	var x_he=getRandomArbitrary(0, 500);
+	var y_he=getRandomArbitrary(0, 200);
+	var x_neon=getRandomArbitrary(0, 500);
+	var y_neon=getRandomArbitrary(0, 200);
+	var x_oxi=getRandomArbitrary(0, 500);
+	var y_oxi=getRandomArbitrary(0, 200);
+	var x_nitro=getRandomArbitrary(0, 500);
+	var y_nitro=getRandomArbitrary(0, 200);
+	var x_hi=getRandomArbitrary(0, 500);
+	var y_hi=getRandomArbitrary(0, 200);
+	var choque=false;
+	var he=false;
+
+	function lienzo(){
+		
+		var canvas=document.getElementById("canvas");
+		var context=canvas.getContext("2d");
+		var img=document.getElementById("dochidro");
+		var img2=document.getElementById("helio");
+		var img3=document.getElementById("neon");
+		var img4=document.getElementById("oxigeno");
+		var img5=document.getElementById("nitrogeno");
+		var img6=document.getElementById("hidrogeno");
+		context.clearRect(0,0,700,500);
+		context.drawImage(img,x_dh,y_dh); 
+		
+		colision();
+		if (he==false){
+		context.drawImage(img2,x_he,y_he);
+	    }
+		
+		if (choque==false){
+		context.drawImage(img3,x_neon,y_neon); 
+		}
+		
+		if (choque==false){
+		context.drawImage(img4,x_oxi,y_oxi); 
+		}
+		if (choque==false){
+		context.drawImage(img5,x_nitro,y_nitro); 
+		}
+		if (choque==false){
+		context.drawImage(img6,x_hi,y_hi); 
+		}
+		
+		
+	}
+
+	function presionandoTecla(event){
+		
+		if (event.keyCode=='68'){
+		x_dh=x_dh+5;
+		lienzo();
+		}
+		if (event.keyCode=='65'){
+		x_dh=x_dh-5;
+		lienzo();
+		}
+		if (event.keyCode=='83'){
+		y_dh=y_dh+5;
+		lienzo();
+		}
+		if (event.keyCode=='87'){
+		y_dh=y_dh-5;
+		lienzo();
+		}
+		
+		}
+ 
+	function colision(){
+		
+	      if (((x_he-x_dh)<20) && ((y_he-y_dh)<20) && (he==false)){
+		  he==true;
+		  
+		  lienzo();
+	 	   
+	} 
+		}
+		
+		
+		
+		function getRandomArbitrary(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+ 
+ </script> <!-- fin script-->
+	   
+ 
+    <!-- end .content --></div>
+
+
+  <div class="footer">
+   <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Licencia (CC) BY-SA 4.0 2023</a>|Desarrollado por los grupo de
+          <a href="nosotros.html">9°/1 y 9°/2</a> 
+        del Liceo Fray Marcos, generación 2023.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
