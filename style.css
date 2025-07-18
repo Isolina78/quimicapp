@@ -121,6 +121,12 @@ ul.nav a:hover { /* esto cambia el color de fondo y del texto tanto para usuario
 	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
 	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
 	color: white;
+	font-size: 10px;
+}
+
+.footer a{	
+	text-decoration: none;
+	font-weight: bold;
 }
 /* ~~ clases float/clear varias ~~ */
 .fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
